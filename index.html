@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZZZ MERCH STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <h1>ZZZ MERCH STORE</h1>
+        <button id="mode-toggle">🌙</button>
+    </header>
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="LOGO MF.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Zenless Zone Zero Merch</h2>
+            <p>Find the best merch inspired by your favorite Zenless Zone Zero characters!</p>
+        </section>
+        <section id="product">
+            <h2>Our Merch</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="ZZZ KEYCHAIN.jpg" alt="KEYCHAIN">
+                    <h3>ZZZ KEYCHAIN</h3>
+                    <p>Price: 70 PHP</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="MOBILE PHONE HOLDER.jpg" alt="MOBILE ZZZ">
+                    <h3>ZZZ MOBILE PHONE HOLDER</h3>
+                    <p>Price: 330 PHP</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="SHARKBOO.webp" alt="SHARKBOO">
+                    <h3>ZZZ SHARKBOO PLUSH</h3>
+                    <p>Price: 555 PHP</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="WISE.jpg" alt="Nendoroid">
+                    <h3>WISE Nendoroid</h3>
+                    <p>Price: 500 PHP</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-container">
+                <div class="review">
+                    <img src="BREAD.jpg" alt="User" class="review-avatar">
+                    <p><strong>BREADRICK:</strong> "Amazing quality!"</p>
+                </div>
+                <div class="review">
+                    <img src="WHITE.jpg" alt="User" class="review-avatar">
+                    <p><strong>LOSEJAY:</strong> "Super stylish!"</p>
+                </div>
+                <div class="review">
+                    <img src="CHILL.jpg" alt="User" class="review-avatar">
+                    <p><strong>RENZY:</strong> "Would buy again!"</p>
+                </div>
+                <div class="review">
+                    <img src="JADERIZZ.jpg" alt="User" class="review-avatar">
+                    <p><strong>JADERIZZ:</strong> "My kid loves it!"</p>
+                </div>
+            </div>
+        </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Is this official merch?</strong> No, this is high-quality fan-made merchandise.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: idk@gmail.com</p>
+            <p>Phone: 123 456 789</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="fb-link">
+                <img src="youtube.png" alt="Youtube Logo"> JUST IN AMORTE
+            </a>
+        </section>
+        <div id="music-container">
+            <button id="music-toggle">▶️ Play Music</button>
+            <audio id="background-music" loop>
+                <source src="ASTRA MUSIC.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </main>
+    <script>
+        document.getElementById("mode-toggle").addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+        });
+        const music = document.getElementById("background-music");
+        const musicToggle = document.getElementById("music-toggle");
+
+        musicToggle.addEventListener("click", function () {
+            if (music.paused) {
+                music.play();
+                musicToggle.textContent = "⏸ Pause Music";
+            } else {
+                music.pause();
+                musicToggle.textContent = "▶️ Play Music";
+            }
+        });
+        const cartButtons = document.querySelectorAll(".add-to-cart");
+        cartButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                alert("Added to cart!");
+            });
+        });
+    </script>
+
+</body>
+</html>
